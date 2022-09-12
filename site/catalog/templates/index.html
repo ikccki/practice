@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+<h2>Новости</h2>
+
+   {% for item in news %}
+<div class="news_block"> 
+
+    <p class="date_news">{{ item.date|date:"d.m.Y" }}</p>
+    <h3 class="news_list"><a href="{% url 'news_detail' item.id %}">{{item.title}}</a></h3>
+    <p class="news_short_desc">{{ item.short_desc }}</p>
+</div>
+  {% endfor %}
+
+{% endblock %}

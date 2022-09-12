@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1 class="news_detail_header">{{ news.title }}</h1>
+  <p class="news_date_detail">{{ news.date | date:"d.m.y" }}</p>
+  <p class="news_short_desc_detail">{{ news.short_desc }}</p>
+
+  <p class="news_detail_text">{{ news.text }}</p>
+
+  {% endblock %}
